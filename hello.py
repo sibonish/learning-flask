@@ -3,9 +3,14 @@ from markupsafe import escape
 #first flask
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def index():
     return 'Index Page'
+
+@app.route("/projects/")
+def routing():
+    return 'Redirecting users to projects page'
+
 @app.route('/hello')
 def hello():
     return '<p>Hello, World!</p>'
